@@ -1,0 +1,116 @@
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+p:not(:last-child) {
+	margin: 0 0 20px;
+}
+
+@media (max-width: 578px) {
+	main {
+		max-width: 800px;
+		padding: 10px;
+	}
+}
+
+section {
+	display: none;
+	padding: 20px 0 0;
+}
+
+input {
+	display: none;
+}
+
+.inputs > input {
+	display: block;
+}
+
+input[type='text'],
+select {
+	width: 100%;
+	padding: 12px 20px;
+	display: inline-block;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	box-sizing: border-box;
+}
+
+label {
+	display: inline-block;
+	margin: 0 0 -1px;
+	padding: 15px 25px;
+	font-weight: 600;
+	font-size: 18px;
+	text-align: center;
+	color: #313332;
+}
+
+label:before {
+	font-weight: normal;
+	margin-right: 10px;
+}
+
+label[for*='1']:before {
+	content: 'Dispenser A';
+}
+label[for*='2']:before {
+	content: 'Dispenser B';
+}
+label[for*='3']:before {
+	content: 'Algemeen';
+}
+
+label:hover {
+	color: #1d8191;
+	cursor: pointer;
+}
+
+input:checked + label {
+	color: #1d8191;
+	border-bottom: 2px solid #1d8191;
+}
+
+#tab1:checked ~ #content1,
+#tab2:checked ~ #content2,
+#tab3:checked ~ #content3 {
+	display: block;
+}
+
+@media (min-width: 768px) {
+	label {
+		font-size: 22px;
+	}
+	label:before {
+		margin: 0;
+		font-size: 22px;
+	}
+}
+
+@media screen and (max-width: 800px) {
+	label {
+		font-size: 18px;
+	}
+	label:before {
+		margin: 0;
+		font-size: 18px;
+	}
+}
+
+@media screen and (max-width: 500px) {
+	label {
+		padding-left: 36px;
+		padding-right: 36px;
+	}
+}
+
+@media screen and (max-width: 374px) {
+	label {
+		padding-left: 24px;
+		padding-right: 24px;
+	}
+}
